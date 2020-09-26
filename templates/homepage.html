@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>My Personal Machine Learning Projects</title>
+	
+	<!-- Styles -->
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" rel="stylesheet">
+	<link rel = "stylesheet" href = "../static/css/homepage.css?version=1">
+	<link rel = "stylesheet" href = "../static/css/dropdown.css?version=1">
+
+    <!-- Scripts -->
+    <link rel = "stylesheet" href = "../static/js/homepage.js">
+</head>
+
+<body>
+	<div class="navbar">
+		<div class="dropdown">
+			<button class="dropbtn">Machine Learning 
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="/sign">Sign-Language-Classifier</a>
+				<a href="/horse">Horses vs. Humans</a>
+				<a href="">Rock-Paper-Scissors</a>
+				<a href = "">Cats vs. Dogs</a>
+				<a href = "">Clothes Classifier</a>
+				<a href = "">Handwritten Digits Classifier</a>
+			</div>
+		</div> 
+		<div class="dropdown">
+			<button class="dropbtn">Video Games 
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="">Blackjack</a>
+				<a href="">Asteriods</a>
+				<a href="">Tic-Tac-Toe</a>
+				<a href = "">Snake Game</a>
+			</div>
+		</div> 
+	</div>
+
+	<section class="flex center banner">
+		<h1>Coding Projects Homepage</h1>
+		<div class="flex center">
+			<p style = "color: white;"></p>
+			<div class="flex buttons">			
+				<button class="secondary btn set"><a  style = "color: white; text-decoration: none;" href = 'https://www.tanishtyagi.com/'> My Website </a></button>
+			</div>
+        </div>
+        
+    </section>
+    
+	<main>
+		<div class="flex text-container">
+			<p style = "color: white;">Welcome to the homepage of my coding projects!</p>
+        </div>
+        
+		<div class="flex card-container">
+			<div class="flex card" style="background-color: rgb(32,32,32);">
+				<i class="fas fa-battery-full"></i>
+				<p  style = "color: white;"></p>
+			</div>
+			<div class="flex card" style="background-color: rgb(32,32,32);">
+				<i class="fas fa-server"></i>
+				<p style = "color: white;"></p>
+			</div>
+			<div class="flex card" style="background-color: rgb(32,32,32);">
+				<i class="fas fa-upload"></i>
+				<p style = "color: white;"></p>
+			</div>
+        </div>
+        
+		<div class="flex container left">
+			<img src="{{url_for('static', filename = '')}}" />
+			<div>
+				<h1 class="glow" style = "color: #FDBD01;"></h1>
+				<p style = "color: white;"></p>
+			</div>
+        </div>
+        
+		<div class="flex container right">
+			<img src="{{url_for('static', filename = '')}}" />
+			<div>
+				<h1  style = "color: #FDBD01;" class="glow"></h1>
+				<p style = "color: white;"></p>
+			</div>
+        </div>
+        
+		<div class="flex container left">
+			<img src="{{url_for('static', filename = '')}}" />
+			<div>
+				<h1 class="glow" style = "color: #FDBD01;"></h1>
+				<p style = "color: white;"></p>
+			</div>
+        </div>
+        
+		<div class="flex column center">
+			<h1 class="glow margin-center" style = "color: #FDBD01;"></h1>
+        </div>
+        
+    </main>
+    
+	<footer class="flex" style="background-color: rgb(32,32,32);">
+		<div class="icons">
+			<a href="https://github.com/TanishT"><i class='fab fa-github'></i></a>
+			<a href="https://www.instagram.com/tanishtyagi23/"><i class="fab fa-instagram"></i></a>
+			<a href="https://www.facebook.com/tanish.tyagi.779"><i class="fab fa-facebook"></i></a>
+		</div>
+    </footer>
+    
+  <div class="copyright">
+    <p>© 2020 @TanishTyagi</p>
+  </div>
+
+
+</body>
