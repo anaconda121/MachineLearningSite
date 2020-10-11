@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tic-Tac-Toe</title>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" rel="stylesheet">
+    <link rel = "stylesheet" href = "../static/css/home/homepage.css?version=1">
+    <link rel = "stylesheet" href = "../static/css/home/dropdown.css?version=1">
+
+
+  </head>
+  
+  <div class="navbar">
+    <div class="dropdown">
+      <button class="dropbtn">Machine Learning 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="/sign">Sign-Language-Classifier</a>
+        <a href="/horse">Horses vs. Humans</a>
+        <a href="/rps">Rock-Paper-Scissors</a>
+        <a href = "/cvd">Cats vs. Dogs</a>
+        <a href = "/clothes">Clothes Classifier</a>
+        <a href = "/digits">Handwritten Digits Classifier</a>
+      </div>
+    </div> 
+    <div class="dropdown">
+      <button class="dropbtn">Video Games 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="/blackjack">Blackjack</a>
+        <a href="/asteriods">Asteriods</a>
+        <a href="/tictactoe">Tic-Tac-Toe</a>
+        <a href = "/snake">Snake Game</a>
+      </div>
+    </div> 
+  </div>
+
+  <canvas id="gameCanvas" width="700" height="500"></canvas> 
+
+  <style>
+    #gameCanvas {
+      background-color: white;
+    }
+  </style>
+    
+  <!-- Scripts -->
+  <script src ="../static/js/asteriods.js"> </script>
+</html>

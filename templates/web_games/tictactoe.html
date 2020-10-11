@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tic-Tac-Toe</title>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" rel="stylesheet">
+    <link rel = "stylesheet" href = "../static/css/home/homepage.css?version=1">
+    <link rel = "stylesheet" href = "../static/css/home/dropdown.css?version=1">
+
+    <!-- Scripts -->
+    <script src ="../static/js/tictactoe.js"> </script>
+  </head>
+  
+  <div class="navbar">
+    <div class="dropdown">
+      <button class="dropbtn">Machine Learning 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="/sign">Sign-Language-Classifier</a>
+        <a href="/horse">Horses vs. Humans</a>
+        <a href="/rps">Rock-Paper-Scissors</a>
+        <a href = "/cvd">Cats vs. Dogs</a>
+        <a href = "/clothes">Clothes Classifier</a>
+        <a href = "/digits">Handwritten Digits Classifier</a>
+      </div>
+    </div> 
+    <div class="dropdown">
+      <button class="dropbtn">Video Games 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="/blackjack">Blackjack</a>
+        <a href="/asteriods">Asteriods</a>
+        <a href="/tictactoe">Tic-Tac-Toe</a>
+        <a href = "/snake">Snake Game</a>
+      </div>
+    </div> 
+  </div>
+
+<p> In this game, you are a doctor who is going around the map and killing the enemy virus icon. You use the arrow keys to move around and every time you eat the snake, your body entends by one box and your score increases. </p>
+<br><br><br>
+
+<style>
+  header {
+  width: 100%;
+  flex-direction: column;
+}
+header nav.options {
+  padding: 1em;
+  text-align: center;
+}
+header nav.options a {
+  margin: 0.5em;
+  font-size: 1.1em;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a.link {
+  display: inline-block;
+}
+a.link::after {
+  content: "";
+  display: block;
+  position: relative;
+  left: 50%;
+  transform: translateY(0.5em) translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--secondary);
+    transition: width 0.3s ease;
+}
+a.link:hover::after  {
+    width: 100%;
+}
+
+section.banner {
+    background: linear-gradient(to bottom, transparent, var(--primary), var(--primary)), url("main-bg.jpg") no-repeat;
+    background-size: auto calc(100vw);
+    background-attachment: fixed;
+    min-height: 50vw;
+    text-align: center;
+    flex-direction: column;
+}
+section.banner h1 {
+    word-break: break-word;
+    font-size: 4em;
+    margin: 20vh 0 0.5em 0;
+    text-shadow: 0 0 0.5em var(--secondary);
+    color: var(--secondary);
+}
+section.banner > div {
+    max-width: 60%;
+    flex-direction: column;
+}
+section.banner > div p {
+    font-size: 1.1em;
+    margin: 0 0 2em 0;
+}
+</style>
+  <div class="taskbar"><div class="logo"></div></div><br><br>
+<center>
+    <form name=game>
+        <table border=0>
+        <td>
+        <table border=1>
+        <tr>
+        <td><a href="javascript:yourChoice('A')"><img src="http://www.formica.com/~/media/emea/images/decors/eu/f0949.jpg" border=0 height=100 width=100 name=A alt="Top-Left"></a></td>
+        <td><a href="javascript:yourChoice('B')"><img src="http://www.formica.com/~/media/emea/images/decors/eu/f0949.jpg" border=0 height=100 width=100 name=B alt="Top-Center"></a></td>
+        <td><a href="javascript:yourChoice('C')"><img src="http://www.formica.com/~/media/emea/images/decors/eu/f0949.jpg" border=0 height=100 width=100 name=C alt="Top-Right"></a></td>
+        </tr>
+        <tr>
+        <td><a href="javascript:yourChoice('D')"><img src="http://www.formica.com/~/media/emea/images/decors/eu/f0949.jpg" border=0 height=100 width=100 name=D alt="Middle-Left"></a></td>
+        <td><a href="javascript:yourChoice('E')"><img src="http://www.formica.com/~/media/emea/images/decors/eu/f0949.jpg" border=0 height=100 width=100 name=E alt="Middle-Center"></a></td>
+        <td><a href="javascript:yourChoice('F')"><img src="http://www.formica.com/~/media/emea/images/decors/eu/f0949.jpg" border=0 height=100 width=100 name=F alt="Middle-Right"></a></td>
+        </tr>
+        <tr>
+        <td><a href="javascript:yourChoice('G')"><img src="http://www.formica.com/~/media/emea/images/decors/eu/f0949.jpg" border=0 height=100 width=100 name=G alt="Bottom-Left"></a></td>
+        <td><a href="javascript:yourChoice('H')"><img src="http://www.formica.com/~/media/emea/images/decors/eu/f0949.jpg" border=0 height=100 width=100 name=H alt="Bottom-Center"></a></td>
+        <td><a href="javascript:yourChoice('I')"><img src="http://www.formica.com/~/media/emea/images/decors/eu/f0949.jpg" border=0 height=100 width=100  name=I alt="Bottom-Right"></a></td>
+        </tr>
+        </table>
+        </td>
+        <td>
+        <table>
+        <tr><td><input type=text size=5 name=you></td><td>You</td></tr>
+        <tr><td><input type=text size=5 name=computer></td><td>Computer</td></tr>
+        <tr><td><input type=text size=5 name=ties></td><td>Ties</td></tr>
+        </table>
+        </td>
+        </table>
+        <input type=button value="Play Again" onClick="playAgain();">
+        &nbsp;&nbsp;
+        <input type=button value="Game Help" onClick="help();">
+        &nbsp;&nbsp;
+        <input type=button value="Quit Game" onClick="quitGame();">
+    </form>
+</center>
+<style>
+    body {
+    background-color: palegreem;
+}
+
+table {
+    background-color: limegreen;
+}
+
+input {
+    background-color: yellow;
+    padding: 6px;
+    border-color: black;
+    border-width: thick;
+}
+</style>
+  <script>
+</script>
+</html>
